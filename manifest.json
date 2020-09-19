@@ -1,6 +1,18 @@
 {
   "name": "Olddit",
   "version": "1.0",
-  "description": "Ensuring you're always on old.reddit.com",
-  "manifest_version": 2
+  "description": "Ensuring you're at old reddit",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://www.reddit.com/*"],
+      "js": ["pre-load.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://old.reddit.com/*"],
+      "js": ["post-load.js"],
+      "run_at": "document_idle"
+    }
+  ]
 }
