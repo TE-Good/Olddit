@@ -6,13 +6,13 @@
   "content_scripts": [
     {
       "matches": ["https://www.reddit.com/*"],
-      "js": ["pre-load.js"],
+      "js": ["scripts/change_location.js"],
       "run_at": "document_start"
     },
     {
       "matches": ["https://old.reddit.com/*"],
-      "js": ["post-load.js"],
-      "run_at": "document_idle"
+      "js": ["scripts/remove_new_button.js"],
+      "run_at": "document_start"
     }
   ]
 }
