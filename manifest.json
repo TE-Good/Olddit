@@ -3,6 +3,11 @@
   "version": "1.0",
   "description": "Ensuring you're at old reddit",
   "manifest_version": 2,
+  "icons": {
+    "16": "images/turtle-16.png",
+    "48": "images/turtle-48.png",
+    "128": "images/turtle-128.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://www.reddit.com/*"],
