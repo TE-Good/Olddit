@@ -20,5 +20,5 @@ To install you'll need to download this repo, then follow these steps;
 >3. Click the LOAD UNPACKED button and select the extension directory.
 
 ### Firefox
-* https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension (Under "Trying it out > Installing")
+* https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 >In Firefox: Open the about:debugging page, click "This Firefox" (in newer versions of Firefox), click "Load Temporary Add-on", then select any file in your extension's directory.
