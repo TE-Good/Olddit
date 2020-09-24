@@ -1,6 +1,6 @@
 # Olddit
 ## Browser Extention
-### *What is it?*
+### What is it?
 This extention is for people who have used www.reddit.com for a long time, and do not like change.
 
 Olddit will ensure that you'll always have the old reddit UI instead of their new version, and also remove the annoying orange button in the corner. Because we don't want new reddit.
@@ -10,7 +10,7 @@ It currently supports Chrome and Firefox.
 ## Installation
 To install you'll need to download this repo, then follow these steps;
 
-### *Chrome*
+### Chrome
 * https://developer.chrome.com/extensions/getstarted
 > The directory holding the manifest file can be added as an extension in developer mode in its current state.
 >
@@ -19,6 +19,6 @@ To install you'll need to download this repo, then follow these steps;
 >2. Enable Developer Mode by clicking the toggle switch next to Developer mode.
 >3. Click the LOAD UNPACKED button and select the extension directory.
 
-### *Firefox*
+### Firefox
 * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension (Under "Trying it out > Installing")
 >In Firefox: Open the about:debugging page, click "This Firefox" (in newer versions of Firefox), click "Load Temporary Add-on", then select any file in your extension's directory.
