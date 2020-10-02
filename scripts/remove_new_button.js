@@ -1,4 +1,9 @@
-// Taken from https://stackoverflow.com/questions/32533580/deleting-dom-elements-before-the-page-is-displayed-to-the-screen-in-a-chrome-ex
+/**
+ * This module goes through the DOM while it loads and removes the 
+ * `GET NEW REDDIT` button before it renders.
+ * 
+ * Taken from https://stackoverflow.com/questions/32533580/deleting-dom-elements-before-the-page-is-displayed-to-the-screen-in-a-chrome-ex
+ */
 
 const DEL_SELECTOR = '#redesign-beta-optin-btn';
 
