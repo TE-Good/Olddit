@@ -16,6 +16,11 @@
     },
     {
       "matches": ["https://old.reddit.com/*"],
+      "js": ["scripts/change_location_test.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://old.reddit.com/*"],
       "js": ["scripts/remove_new_button.js"],
       "run_at": "document_start"
     }
