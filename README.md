@@ -22,3 +22,7 @@ To install you'll need to download this repo, then follow these steps;
 ### Firefox
 * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 >In Firefox: Open the about:debugging page, click "This Firefox" (in newer versions of Firefox), click "Load Temporary Add-on", then select any file in your extension's directory.
+
+<p align="center">
+  <img src="images/turtle-128.png" />
+</p>
