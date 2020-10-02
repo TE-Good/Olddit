@@ -11,18 +11,18 @@
   "content_scripts": [
     {
       "matches": ["https://www.reddit.com/*"],
-      "js": ["scripts/change_location.js"],
+      "js": ["scripts/location_redirect.js"],
       "run_at": "document_start"
-    },
-    {
-      "matches": ["https://old.reddit.com/*"],
-      "js": ["scripts/change_location_test.js"],
-      "run_at": "document_end"
     },
     {
       "matches": ["https://old.reddit.com/*"],
       "js": ["scripts/remove_new_button.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": ["https://old.reddit.com/*"],
+      "js": ["scripts/override_article_links.js", "scripts/overwrite_text_links.js"],
+      "run_at": "document_end"
     }
   ]
 }

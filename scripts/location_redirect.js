@@ -1,4 +1,7 @@
-// POSSIBLY STILL INCLUDE THIS AS A LAST DEFENCE
+/**
+ * Auto changes the URL from www.reddit.com/.. to old.reddit.com/..
+ * Last line of defence.
+ */
 // // Cannot use replace, owing to edge case of targeted word being in URL twice
 // const currentLocation = window.location.href
 // const locationSplit = currentLocation.split('/')
