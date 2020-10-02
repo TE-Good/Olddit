@@ -3,10 +3,8 @@
  * and overwrite them with an old versioned link.
  */
 
-const currentURL = window.location.href
-
-// Ensure this script doesn't run 
-if (!currentURL.match('/comments/')) {
+// Ensure script doesn't runs if in thread
+if (!window.location.href.match('/comments/')) {
 
   // Get all articles
   const dataType = document.querySelectorAll('*[data-type="link"]')
