@@ -13,12 +13,14 @@ dataType.forEach(link => {
     // Replace all thumbnail hrefs
     const thumbnail = link.childNodes.item(3)
     thumbnail.href = oldRedditURL
-    console.log({thumbnail})
     
     // TASK3 - FIND ALL HREFS FOR TITLE
+    const title = link.childNodes.item(4).childNodes.item(0).childNodes.item(0).childNodes.item(0)
+    title.href = oldRedditURL
+
     // TASK4 - IF THERE IS A RAW HYPERLINK ANYWHERE IN TEXT ON THE PAGE, MAKE SURE TO REPLACE IT (MIGHT NEED REGEX)
     
-    const output = { tag: link, combinedURL}
+    const output = { tag: link}
     filteredLinks.push(output)
   }
 })
