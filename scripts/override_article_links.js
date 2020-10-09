@@ -6,23 +6,29 @@
 // Ensure script doesn't runs if in thread
 if (!window.location.href.match('/comments/')) {
 
-  // Get all articles
-  const dataType = document.querySelectorAll('*[data-type="link"]')
+  const dataTypeTitles = document.querySelectorAll('*[data-event-action="title"]')
+  const dataTypeThumbnail = document.querySelectorAll('*[data-event-action="thumbnail"]')
+  
+  dataTypeTitles.forEach(title => replaceVReddItLinkHref(title))
+  dataTypeThumbnail.forEach(thumbnail => replaceVReddItLinkHref(thumbnail))
+}
 
-  dataType.forEach(link => {
-    // Filter by minified video links
-    if (link.attributes.getNamedItem('data-url').value.includes('https://v.redd.it/')) {
-      // Get the old URL
-      const permalinkURL = link.attributes.getNamedItem('data-permalink').value
-      const oldRedditURL = `https://old.reddit.com${permalinkURL}`
-      
-      // Replace all thumbnail hrefs
-      const thumbnail = link.childNodes.item(3)
-      thumbnail.href = oldRedditURL
-      
-      // Replace all title hrefs
-      const title = link.childNodes.item(4).childNodes.item(0).childNodes.item(0).childNodes.item(0)
-      title.href = oldRedditURL
-    }
-  })
+/**
+ * If the element.host is 'v.redd.it' then reassign the href
+ * @param {object} element 
+ */
+function replaceVReddItLinkHref(element) {
+  if (element.host === 'v.redd.it') element.href = findPermalink(element)
+}
+
+/**
+ * Recursive function which searches up the DOM parent tree to retrieve the permalink URL
+ * @param {object} element 
+ */
+function findPermalink(element) {
+  const permalink = element.attributes.getNamedItem('data-permalink')
+  if (permalink && permalink.value.includes('/comments/')) {
+      return `https://old.reddit.com${permalink.value}`
+  }
+  return findPermalink(element.parentNode)
 }
